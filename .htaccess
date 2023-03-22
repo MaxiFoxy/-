@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{REQEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !main\.js$
+RewriteRule ^(.+)$ index.php?q=$1 [L,QSA]
